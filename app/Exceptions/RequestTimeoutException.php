@@ -8,6 +8,6 @@ class RequestTimeoutException extends Exception
 {
     public static function message()
     {
-        return new static('Запрос выполняется слишком долго.');
+        return new static('The request has been running for too long.');
     }
 }
