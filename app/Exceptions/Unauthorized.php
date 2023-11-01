@@ -6,7 +6,7 @@ use Exception;
 
 class Unauthorized extends Exception
 {
-    public static function message()
+    public static function message(): static
     {
         return new static('Unauthorized.');
     }
