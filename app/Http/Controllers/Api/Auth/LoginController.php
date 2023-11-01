@@ -17,10 +17,11 @@ class LoginController extends Controller
 
         if (!$user
             || !Hash::check($request->password, $user->password)
-            || !$token = Auth::login($user)
         ) {
             throw Unauthorized::message();
         }
+
+        $token = Auth::login($user);
 
         return response()->json([
             'access_token' => $token,
